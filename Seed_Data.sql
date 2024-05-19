@@ -17,7 +17,7 @@ INSERT INTO Suspects (SuspectID, FirstName, LastName, DateOfBirth, Gender, Conta
 (2, 'Sunita', 'Joshi', '1992-03-14', 'Female', '8765 Walnut St, Ahmedabad, +91-3210987654'),
 (3, 'Amit', 'Gupta', '1976-11-29', 'Male', '1098 Fir Ln, Hyderabad, +91-2109876543'),
 (4, 'Neha', 'Kapoor', '1988-07-07', 'Female', '5432 Spruce Dr, Jaipur, +91-1098765432'),
-(5, 'Suresh', 'Verma', '1993-09-25', 'Male', '7890 Ash Ct, Lucknow, +91-0987654321')
+(5, 'Suresh', 'Verma', '1993-09-25', 'Male', '7890 Ash Ct, Lucknow, +91-0987654321'),
 (6, 'Meena', 'Bansal', '1992-04-16', 'Female', 'meena.bansal@example.com, 9876543225'),
 (7, 'Rajesh', 'Shah', '1990-05-17', 'Male', 'rajesh.shah@example.com, 9876543226'),
 (8, 'Deepa', 'Iyer', '1985-06-18', 'Female', 'deepa.iyer@example.com, 9876543227'),

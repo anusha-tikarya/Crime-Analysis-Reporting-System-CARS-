@@ -59,7 +59,7 @@ def main():
         
 
         elif choice == '4':
-            print("-----------Kindly Fill The Correct Information--------------")
+            print("<-----------Kindly Fill The Correct Information-------------->")
             # Collect input for searching incidents
             incidentID = input("Enter search incidentid: ")
             incidents = service.searchIncidents(incidentID)
@@ -67,7 +67,7 @@ def main():
                 print(incident)
 
         elif choice == '5':
-            # Collect input for generating incident report
+            #Collect input for generating incident report
             print("-----------Kindly Fill The Correct Information--------------")
             incidentID = int(input("Enter Incident ID: "))
             incident = service.searchIncidents(incidentID)
@@ -80,10 +80,21 @@ def main():
                 status = input("Enter Status : ")
                 report = Report(reportID, incidentID, reportingOfficer, reportDate, reportDetails, status)
                 success = service.generateIncidentReport(report)
-                print("Report created successfully!" if success else "Failed to create report.")
+                print("Report created successfully!" if success else "Error: Failed to generate incident report")
+
+
             else:
                 print("Incident not found.")
 
+
+        #         reportID = int(input("Enter Report ID : ")) 
+        #         incidentID = int(input("Enter incident id: "))
+        #         reportingOfficer = input("Enter reporting officer: ")
+        #         reportDate = input("Enter date in the format YYYY-MM-DD: ")
+        #         reportDetails = input("Enter report details: ")
+        #         status = input("Enter status: ")
+        #         report = Report(reportID,incidentID, reportingOfficer, reportDate, reportDetails, status)
+        #         service.generateIncidentReport(report)
         elif choice == '6':
             # Collect input for creating a new case
             print("-----------Kindly Fill The Correct Information--------------") 

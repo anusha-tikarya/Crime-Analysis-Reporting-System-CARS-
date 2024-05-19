@@ -72,21 +72,20 @@ class CrimeAnalysisServiceImpl(ICrimeAnalysisService,DBConnection):
         print(f"Searching incidents with criteria {incidentID}")
         return 
 
-    def generateIncidentReport(self, report):
+    def generateIncidentReport(self, report: Report):
       
         try:
             self.cursor.execute(
                 "INSERT INTO Reports (reportID, incidentID, reportingOfficer, reportDate, reportDetails, status) VALUES (?, ?, ?,?,?,?)",
                 (report.get_reportID(), report.get_incidentID(), report.get_reportingOfficer(),report.get_reportDate(),report.get_reportDetails(),report.get_status()),
+
             )
             self.conn.commit()   
             print("Generating incident report")
             return 
         except Exception as e:
             print(e)
-        
-        # print("Generating incident report")
-        # return 
+    
 
     def createCase(self, caseID, case_description, incidents):
 
