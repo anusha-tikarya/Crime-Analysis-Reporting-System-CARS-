@@ -15,11 +15,14 @@ class CrimeAnalysisServiceImpl(ICrimeAnalysisService,DBConnection):
                 "INSERT INTO Incidents (incidentID, incidentType, incidentDate,Location_Longitude,Location_Latitude,description,status,victimID,suspectID) VALUES (?, ?, ?,?,?,?,?, ?, ?)",
                 (self.incidentID, self.incidentType, self.incidentDate,self.Location_Longitude,self.Location_Latitude,self.description,self.status,self.victimID,self.suspectID),
             )
-            self.conn.commit()  
+            self.conn.commit()
+            print("Creating incident")
+            return True  
+    
         except Exception as error:
             print(error)
-        print("Creating incident")
-        return True
+        # print("Creating incident")
+          #return True
     
 
     def updateIncidentStatus(self, status, incident_id):

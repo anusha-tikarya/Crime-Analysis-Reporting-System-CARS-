@@ -1,4 +1,3 @@
-
 CREATE TABLE Victims(
 	VictimID INT,
 	FirstName VARCHAR(50),
