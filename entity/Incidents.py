@@ -1,43 +1,43 @@
 class Incident:
-    def __init__(self, incidentID, incidentType, incidentDate, Location_Latitude,Location_Longitude, Description, Status, VictimID , SuspectId):
-        self.incidentID = incidentID
-        self.incidentType= incidentType
-        self.incidentDate=incidentDate
+    def __init__(self, incidentID, incidentType, incidentDate, Location_Latitude,Location_Longitude, description, status, victimID , suspectID):
+        self.__incidentID = incidentID
+        self.__incidentType= incidentType
+        self.__incidentDate=incidentDate
         #self.__Location = Location
-        self.Location_Longitude = Location_Longitude
-        self.Location_Latitude = Location_Latitude
-        self.Description=Description
-        self.Status=Status
-        self.VictimID=VictimID
-        self.SuspectId=SuspectId
+        self.__Location_Longitude = Location_Longitude
+        self.__Location_Latitude = Location_Latitude
+        self.__description=description
+        self.__status=status
+        self.__victimID=victimID
+        self.__suspectID=suspectID
         
-#  # Getters
-#     def get_IncidentID(self):
-#         return self.__IncidentID
+ # Getters
+    def get_incidentID(self):
+        return self.__incidentID
 
-#     def get_IncidentType(self):
-#         return self.__IncidentType
+    def get_incidentType(self):
+        return self.__incidentType
 
-#     def get_IncidentDate(self):
-#         return self.__IncidentDate
+    def get_incidentDate(self):
+        return self.__incidentDate
 
-#     def get_Location_Latitude(self):
-#         return self.__Location_Latitude
+    def get_Location_Latitude(self):
+        return self.__Location_Latitude
 
-#     def get_Location_Longitude(self):
-#         return self.__Location_Longitude
+    def get_Location_Longitude(self):
+        return self.__Location_Longitude
 
-#     def get_Description(self):
-#         return self.__Description
+    def get_description(self):
+        return self.__description
 
-#     def get_Status(self):
-#         return self.__Status
+    def get_status(self):
+        return self.__status
 
-#     def get_VictimID(self):
-#         return self.__VictimID
+    def get_victimID(self):
+        return self.__victimID
 
-#     def get_SuspectId(self):
-#         return self.__SuspectId
+    def get_suspectID(self):
+        return self.__suspectID
 
 # Setters
     def set_IncidentID(self, incidentID):

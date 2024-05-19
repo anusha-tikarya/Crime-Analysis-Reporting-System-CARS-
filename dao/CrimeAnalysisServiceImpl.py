@@ -9,11 +9,11 @@ from util.DBConn import DBConnection
 from exception.IncidentNumberNotFoundException import IncidentNumberNotFoundException
 
 class CrimeAnalysisServiceImpl(ICrimeAnalysisService,DBConnection):
-    def createIncident(self, incident):
+    def createIncident(self, incident:Incident):
         try:
             self.cursor.execute(
                 "INSERT INTO Incidents (incidentID, incidentType, incidentDate,Location_Longitude,Location_Latitude,description,status,victimID,suspectID) VALUES (?, ?, ?,?,?,?,?, ?, ?)",
-                (self.incidentID, self.incidentType, self.incidentDate,self.Location_Longitude,self.Location_Latitude,self.description,self.status,self.victimID,self.suspectID),
+                (incident.get_incidentID(), incident.get_incidentDate(), incident.get_incidentDate(),incident.get_Location_Longitude(),incident.get_Location_Latitude(),incident.get_description(),incident.get_status(),incident.get_victimID(),incident.get_suspectID()),
             )
             self.conn.commit()
             print("Creating incident")
@@ -77,14 +77,16 @@ class CrimeAnalysisServiceImpl(ICrimeAnalysisService,DBConnection):
         try:
             self.cursor.execute(
                 "INSERT INTO Reports (reportID, incidentID, reportingOfficer, reportDate, reportDetails, status) VALUES (?, ?, ?,?,?,?)",
-                (report.reportID, report.incidentID, report.reportingOfficer,report.reportDate,report.reportDetails,report.status),
+                (report.get_reportID(), report.get_incidentID(), report.get_reportingOfficer(),report.get_reportDate(),report.get_reportDetails(),report.get_status()),
             )
             self.conn.commit()   
+            print("Generating incident report")
+            return 
         except Exception as e:
             print(e)
         
-        print("Generating incident report")
-        return 
+        # print("Generating incident report")
+        # return 
 
     def createCase(self, caseID, case_description, incidents):
 

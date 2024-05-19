@@ -1,4 +1,5 @@
 # 
+from tabulate import tabulate
 from datetime import datetime
 from typing import Collection
 from entity.Incidents import Incident
@@ -24,9 +25,9 @@ def main():
         print("------------------------------------------------------------")
         choice = input("Enter your choice: ")
         
-        print("-----------Kindly Fill The Correct Information--------------")
+       
         if choice == '1':
-            
+            print("-----------Kindly Fill The Correct Information--------------")
             # Collect input for creating a new incident
             incidentID = int(input("Enter Incident ID: "))
             incidentType = input("Enter Incident Type: ")
@@ -42,6 +43,7 @@ def main():
             print("Incident created successfully!" if success else "Failed to create incident.")
 
         elif choice == '2':
+            print("-----------Kindly Fill The Correct Information--------------")
             # Collect input for updating incident status
             incidentID = int(input("Enter Incident ID: "))
             status = input("Enter new Status: ")
@@ -49,6 +51,7 @@ def main():
             print("Incident status updated successfully!" if success else "Failed to update incident status.")
         
         elif choice == '3':
+            print("-----------Kindly Fill The Correct Information--------------")
             # Collect input for getting incidents in a date range
             startDate = datetime.strptime(input("Enter Start Date (YYYY-MM-DD): "), '%Y-%m-%d')
             endDate = datetime.strptime(input("Enter End Date (YYYY-MM-DD): "), '%Y-%m-%d')
@@ -56,6 +59,7 @@ def main():
         
 
         elif choice == '4':
+            print("-----------Kindly Fill The Correct Information--------------")
             # Collect input for searching incidents
             incidentID = input("Enter search incidentid: ")
             incidents = service.searchIncidents(incidentID)
@@ -64,6 +68,7 @@ def main():
 
         elif choice == '5':
             # Collect input for generating incident report
+            print("-----------Kindly Fill The Correct Information--------------")
             incidentID = int(input("Enter Incident ID: "))
             incident = service.searchIncidents(incidentID)
             if incident:
@@ -81,6 +86,7 @@ def main():
 
         elif choice == '6':
             # Collect input for creating a new case
+            print("-----------Kindly Fill The Correct Information--------------") 
             caseID = int(input("Enter Case ID: "))
             caseDescription = input("Enter Case Description: ")
             incidentIDs = input("Enter Incident IDs (comma separated): ").split(',')
@@ -98,12 +104,14 @@ def main():
                 
         elif choice == '7':
             # Collect input for getting case details
+            print("-----------Kindly Fill The Correct Information--------------")
             caseID = int(input("Enter Case ID: "))
             case = service.getCaseDetails(caseID)
             print(case if case else "Case not found.")
 
         elif choice == '8':
             # Collect input for updating case details
+            print("-----------Kindly Fill The Correct Information--------------")
             caseID = int(input("Enter Case ID: "))
             caseDescription = input("Enter new Case Description: ")
             incidentIDs = input("Enter Incident IDs (comma separated): ").split(',')
