@@ -1,4 +1,4 @@
-class LawEnforcementAgency:
+class law_enforcement_agency:
     def __init__(self, agencyID, agencyName, jurisdiction, contactInformation, officers):
         self.__agencyID = agencyID
         self.__agencyName = agencyName

@@ -38,7 +38,7 @@ CREATE TABLE Incidents(
 
 
 
-CREATE TABLE LawEnforcementAgency(
+CREATE TABLE law_enforcement_agency(
 	AgencyID INT,
 	AgencyName VARCHAR(50),
 	Jurisdiction VARCHAR(50),
@@ -57,7 +57,7 @@ CREATE TABLE Officers(
 	ContactInformation VARCHAR(200),
 	AgencyID INT
 	PRIMARY KEY (OfficerID),
-	FOREIGN KEY (AgencyID) References LawEnforcementAgency(AgencyID) 
+	FOREIGN KEY (AgencyID) References law_enforcement_agency(AgencyID) 
 );
 
 
@@ -89,7 +89,7 @@ CREATE TABLE Reports(
 select * from Incidents;
 select * from Victims;
 select * from Suspects;
-select * from LawEnforcementAgency;
+select * from law_enforcement_agency;
 select * from Officers;
 select * from Evidence;
 select * from Reports;

@@ -1,5 +1,5 @@
 import pyodbc
-from .DBPropertyUtil import PropertyUtil
+from .db_property_util import PropertyUtil
 
 
 # When new object -> new connection

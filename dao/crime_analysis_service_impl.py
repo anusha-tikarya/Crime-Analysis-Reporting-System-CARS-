@@ -3,12 +3,12 @@ from datetime import datetime
 from entity.Incidents import Incident
 from entity.Cases import Case
 from entity.Reports import Report
-from dao.ICrimeAnalysisService import ICrimeAnalysisService
+from dao.i_crime_analysis_service import ICrimeAnalysisService
 from datetime import datetime
-from util.DBConn import DBConnection
-from exception.IncidentNumberNotFoundException import IncidentNumberNotFoundException
+from util.db_conn import DBConnection
+from exception.incident_numbernot_found_exception import incident_number_not_found_exception
 
-class CrimeAnalysisServiceImpl(ICrimeAnalysisService,DBConnection):
+class crime_analysis_service_impl(ICrimeAnalysisService,DBConnection):
     def createIncident(self, incident:Incident):
         try:
             self.cursor.execute(
@@ -38,7 +38,7 @@ class CrimeAnalysisServiceImpl(ICrimeAnalysisService,DBConnection):
             self.conn.commit()
             print(f"Updating status for incident {incident_id}")
             return True
-        except IncidentNumberNotFoundException as error1:
+        except incident_number_not_found_exception as error1:
             print(error1)
         except Exception as error2:
             print(error2)

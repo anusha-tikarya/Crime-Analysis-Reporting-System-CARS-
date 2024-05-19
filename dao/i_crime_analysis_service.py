@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from datetime import datetime
-from util.DBConn import DBConnection
+from util.db_conn import DBConnection
 class ICrimeAnalysisService(ABC):
     
     @abstractmethod

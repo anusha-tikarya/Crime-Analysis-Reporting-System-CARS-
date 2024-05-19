@@ -1,18 +1,18 @@
 import unittest
 
-from dao.CrimeAnalysisServiceImpl import CrimeAnalysisServiceImpl
+from dao.crime_analysis_service_impl import crime_analysis_service_impl
 
 from entity.Incidents import Incidents
 
-from exception.IncidentNumberNotFoundException import IncidentNumberNotFoundException
+from exception.incident_numbernot_found_exception import incident_number_not_found_exception
 
-class TestCrimeAnalysisServiceImpl(unittest.TestCase):
+class Testcrime_analysis_service_impl(unittest.TestCase):
     def setUp(self):
-        self.service = CrimeAnalysisServiceImpl()
+        self.service = crime_analysis_service_impl()
         self.test_incident = Incidents("Initial incidence", "2024-04-23", 23.65, 23.66, "Stolen", "Open", "23", "23")
         self.test_incidentID = self.service.create_incident(self.test_incident)
 
-        self.assertIsNotNone(self.test_incident_id)
+        self.assertIsNotNone(self.test_incidentID)
 
     def test_create_incident(self):
         incidentType = "Robbery"

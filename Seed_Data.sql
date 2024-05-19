@@ -24,8 +24,8 @@ INSERT INTO Suspects (SuspectID, FirstName, LastName, DateOfBirth, Gender, Conta
 (9, 'Manoj', 'Desai', '1993-07-19', 'Male', 'manoj.desai@example.com, 9876543228'),
 (10, 'Lata', 'Kaur', '1991-08-20', 'Female', 'lata.kaur@example.com, 9876543229');
 
--- Insert data into LawEnforcementAgency Table
-INSERT INTO LawEnforcementAgency (AgencyID, AgencyName, Jurisdiction, ContactInformation, Officer) VALUES
+-- Insert data into law_enforcement_agency Table
+INSERT INTO law_enforcement_agency (AgencyID, AgencyName, Jurisdiction, ContactInformation, Officer) VALUES
 (1, 'Mumbai Police', 'Mumbai', 'Mumbai, +91-9876543210', 'Inspector'),
 (2, 'Delhi Police', 'Delhi', 'Delhi, +91-8765432109', 'Inspector'),
 (3, 'Bangalore Police', 'Bangalore', 'Bangalore, +91-7654321098', 'Inspector'),

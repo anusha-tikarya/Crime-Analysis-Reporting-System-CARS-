@@ -5,10 +5,10 @@ from typing import Collection
 from entity.Incidents import Incident
 from entity.Cases import Case
 from entity.Reports import Report
-from dao.CrimeAnalysisServiceImpl import CrimeAnalysisServiceImpl
+from dao.crime_analysis_service_impl import crime_analysis_service_impl
 
 def main():
-    service = CrimeAnalysisServiceImpl()
+    service = crime_analysis_service_impl()
     
     while True:
         print("\n**************Crime Analysis and Reporting System**************")
