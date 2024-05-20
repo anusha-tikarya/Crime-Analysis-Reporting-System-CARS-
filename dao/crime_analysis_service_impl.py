@@ -8,6 +8,7 @@ from datetime import datetime
 from util.db_conn import DBConnection
 from exception.incident_numbernot_found_exception import incident_number_not_found_exception
 
+
 class crime_analysis_service_impl(ICrimeAnalysisService,DBConnection):
     def createIncident(self, incident:Incident):
         try:
@@ -80,9 +81,14 @@ class crime_analysis_service_impl(ICrimeAnalysisService,DBConnection):
                 (report.get_reportID(), report.get_incidentID(), report.get_reportingOfficer(),report.get_reportDate(),report.get_reportDetails(),report.get_status()),
 
             )
-            self.conn.commit()   
+            self.conn.commit() 
             print("Generating incident report")
             return 
+            # self.cursor.execute("Select * from Reports") 
+            # Report = self.cursor.fetchall()
+            # return Report  
+            # print("Generating incident report")
+            
         except Exception as e:
             print(e)
     

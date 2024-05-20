@@ -27,7 +27,7 @@ class TestCrimeAnalysisServiceImpl(unittest.TestCase):
         self.service.updateIncidentStatus(status, incident_id)
         
         self.service.cursor.execute.assert_any_call("SELECT * FROM Incidents WHERE IncidentID = ?", (incident_id),)
-        # self.service.cursor.execute.assert_any_call("UPDATE Incidents SET Status = ? WHERE IncidentID = ?", (status, incident_id),)
+        self.service.cursor.execute.assert_any_call("UPDATE Incidents SET Status = ? WHERE IncidentID = ?", (status, incident_id),)
         self.service.conn.commit.assert_called_once()
         print("test_updateIncidentStatus_success passed")
 

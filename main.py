@@ -1,4 +1,4 @@
-# 
+#
 from tabulate import tabulate
 from datetime import datetime
 from typing import Collection
@@ -80,21 +80,13 @@ def main():
                 status = input("Enter Status : ")
                 report = Report(reportID, incidentID, reportingOfficer, reportDate, reportDetails, status)
                 success = service.generateIncidentReport(report)
-                print("Report created successfully!" if success else "Error: Failed to generate incident report")
+                print("Report created successfully!")
 
 
             else:
                 print("Incident not found.")
 
 
-        #         reportID = int(input("Enter Report ID : ")) 
-        #         incidentID = int(input("Enter incident id: "))
-        #         reportingOfficer = input("Enter reporting officer: ")
-        #         reportDate = input("Enter date in the format YYYY-MM-DD: ")
-        #         reportDetails = input("Enter report details: ")
-        #         status = input("Enter status: ")
-        #         report = Report(reportID,incidentID, reportingOfficer, reportDate, reportDetails, status)
-        #         service.generateIncidentReport(report)
         elif choice == '6':
             # Collect input for creating a new case
             print("-----------Kindly Fill The Correct Information--------------") 
@@ -146,3 +138,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
